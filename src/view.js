@@ -14,12 +14,14 @@ export const renderItems = (data) => {
         <dt> Nacionalidad:</dt><dd itemprop="country">${data.facts.countryNacimiento}</dd>
         <dt>Fecha de nacimiento:</dt><dd itemprop="fechaNacimiento">${data.facts.yearOfBirth}</dd>
         <dt>Género literario:</dt><dd itemprop="genero">${data.facts.mainField}</dd>
-        `
+        `;
     itemContainer.setAttribute("itemscope", "");
-    itemContainer.setAttribute("itemtype", "escritoras");
+    itemList.setAttribute("itemtype", "escritoras");
+   
 
     itemList.appendChild(itemContainer);
     list.appendChild(itemList)
+
   });
 
   return list;

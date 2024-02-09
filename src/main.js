@@ -98,7 +98,6 @@ buttonFacts.addEventListener('click', () => {
     renderStats(stats);
   } catch (error) {
     // Manejar errores de manera global o proporcionar algún mecanismo de retroalimentación
-    console.error('Error al calcular estadísticas:', error);
   }
 });
 
@@ -114,11 +113,7 @@ function renderStats(stats) {
 
     // Mostrar las estadísticas en el contenedor
     statsContainer.appendChild(renderStatsElement(stats));
-  } else {
-    // Manejar el caso en el que el contenedor no existe
-    console.error('No se encontró el contenedor de estadísticas.');
-  }
-}
+  } }
 
 // Función para renderizar las estadísticas como elementos HTML
 function renderStatsElement(stats) {
