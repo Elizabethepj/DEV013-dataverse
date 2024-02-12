@@ -194,8 +194,9 @@ footer {
 }
 
 
-@media only screen and (max-width: 450px) {
-  HEAD header {
+
+@media (max-width: 450px) {
+  header {
     padding: 1% 2%;
   }
 
@@ -221,27 +222,24 @@ footer {
   .form-container {
     height: auto;
     font-size: xx-small;
-    padding:2%;
+    padding:0.5%;
     justify-items:center;
     }
 
     select{
-      margin-right: 1%;
+      margin-right: 0.5%;
+      font-size: xx-small;
     }
 
     #button-clear,
     #button-facts {
       font-weight: auto;
       font-size: xx-small;
-      margin-right: 1.5%;
-      margin-left: 1.5%;
+      margin-right: 1%;
+      margin-left: 1%;
     }
-
   
-
-    }
-
-  .card {
+     .card {
     width: 100%;
   }
 
