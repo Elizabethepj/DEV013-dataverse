@@ -16,8 +16,9 @@ export const renderItems = (data) => {
         <dt>Género literario:</dt><dd itemprop="genero">${data.facts.mainField}</dd>
         `;
     itemContainer.setAttribute("itemscope", "");
-    itemList.setAttribute("itemtype", "escritoras");
-   
+    itemContainer.setAttribute("itemtype", "escritoras");
+    itemList.setAttribute("itemtype", "https://schema.org/Person");
+    list.setAttribute("itemtype", "https://schema.org/Person");
 
     itemList.appendChild(itemContainer);
     list.appendChild(itemList)

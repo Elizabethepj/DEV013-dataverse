@@ -15,7 +15,7 @@ const filterSelectors = [
 
 let sortName;// Declaracion de sortName
 
-// Agregar EventListenerpara los select
+// Agrega EventListener para los select
 filterSelectors.forEach(({ selector }) => {
   const selectElement = document.querySelector(selector);
   selectElement.addEventListener("change", applyFilters);
@@ -28,7 +28,6 @@ btnClear.addEventListener("click", function () {
   resetFilters();
   renderItems(data);
   clearStats();
-
 });
 
 // Función para restablecer los filtros
@@ -37,7 +36,7 @@ function resetFilters() {// Recorre los selectores y establece sus valores en va
     document.querySelector(selector).value = "";
   });
   sortName.value = "none";
-  result = sortData(data, "name", "asc");//agregado
+  result = sortData(data, "name", "asc");
   renderDataList();
 }
 
@@ -75,8 +74,7 @@ function applyFilters() {
 
 // Ordenamiento descendente y ascendente
 sortName = document.querySelector('[data-testid="select-sort"]');
-sortName.addEventListener("change", (e) => {
-  e.preventDefault();
+sortName.addEventListener("change", () => {
   applyFilters(); // Actualiza la lista al cambiar el ordenamiento
 });
 
@@ -117,16 +115,12 @@ function renderStats(stats) {
 
 // Función para renderizar las estadísticas como elementos HTML
 function renderStatsElement(stats) {
-  // Crear elementos HTML para mostrar las estadísticas (puedes personalizar según tus necesidades)
   const statsElement = document.createElement('div');
   statsElement.textContent = 'ESTADÍSTICAS';
-
   // Agregar estadísticas de países
   statsElement.appendChild(renderStatsCategory('📶 Cantidad de escritoras por nacionalidad', stats.countries));
-
   // Agregar estadísticas de géneros
   statsElement.appendChild(renderStatsCategory('📶 Cantidad de escritoras por género literario', stats.genres));
-
   return statsElement;
 }
 
@@ -142,7 +136,6 @@ function renderStatsCategory(categoryName, categoryStats) {
     itemElement.textContent = `${item}: ${itemStats}`;
     categoryElement.appendChild(itemElement);
   }
-
   return categoryElement;
 }
 

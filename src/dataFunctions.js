@@ -4,11 +4,9 @@
 
 export const filterData = (data, filterBy, value) => {
   return data.filter((data) => {
-    //object es el parametro para la función filter.Si se elige un filterBy "seaOfOrigin", "originCrew" o "status" la función retorna los elementos que dentro del filterBy sean iguales que el valor seleccionado.
     if (data.facts[filterBy]) {
       return data.facts[filterBy] === value;
     }
-    //si el elemento no coincide con el valor de value no se agrega al resultado del filtro.
     return false;
   });
   
@@ -16,11 +14,9 @@ export const filterData = (data, filterBy, value) => {
 // Funcion para ordenar ASC y DESC
 export const sortData = (data, sortConfig) => {
   const { sortBy, sortOrder } = sortConfig;
-
   const sortedData = data.slice().sort((a, b) => {
     const valA = valorOrdenar(a, sortBy);
     const valB = valorOrdenar(b, sortBy);
-
     if (sortOrder === "asc") {
       return valA.localeCompare(valB);
     } else if (sortOrder === "desc") {
@@ -41,7 +37,6 @@ const valorOrdenar = (item, sortBy) => {
   case "countryNacimiento":
     return item.facts[sortBy];
   default:
-    
     return String(item[sortBy]).toLowerCase();
   }
 };
@@ -65,7 +60,6 @@ const computeCountryStats = (data) => {
     } else {
       accumulator[country] += 1;
     }
-
     return accumulator;
   }, {});
 };
