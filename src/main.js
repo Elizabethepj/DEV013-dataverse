@@ -6,7 +6,6 @@ const dataList = document.querySelector("#root");
 let result = data;
 dataList.appendChild(renderItems(data));
 
-//filterData
 //selecciona los elementos select
 const filterSelectors = [
   { selector: '[data-testid="filter-type"]', property: "mainField" },

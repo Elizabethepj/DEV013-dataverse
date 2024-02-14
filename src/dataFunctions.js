@@ -3,13 +3,11 @@
 //Función filtro
 export const filterData = (data, filterBy, value) => {
   return data.filter((data) => {
-    //object es el parametro para la función filter.
     if (data.facts[filterBy]) {
       return data.facts[filterBy] === value;
     }
     return false;
   });
-  
 };
 
 // Funcion para ordenar ASC y DESC
