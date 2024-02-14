@@ -18,7 +18,8 @@ let sortName;// Declaracion de sortName
 // Agrega EventListener para los select
 filterSelectors.forEach(({ selector }) => {
   const selectElement = document.querySelector(selector);
-  selectElement.addEventListener("change",() => applyFilters);
+  selectElement.addEventListener("change", () => applyFilters());
+  //selectElement.addEventListener("change", applyFilters);
 });
 
 // EventListener para el botón de limpiar

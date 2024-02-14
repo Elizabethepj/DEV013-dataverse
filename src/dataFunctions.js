@@ -1,14 +1,15 @@
 // Estas funciones son ejemplos, aquí puedes desarrollar tus propias funciones.
 
 //Función filtro
-
 export const filterData = (data, filterBy, value) => {
   return data.filter((data) => {
+    //object es el parametro para la función filter.
     if (data.facts[filterBy]) {
       return data.facts[filterBy] === value;
     }
     return false;
   });
+  
 };
 
 // Funcion para ordenar ASC y DESC
@@ -29,7 +30,7 @@ export const sortData = (data, sortConfig) => {
   return sortedData;
 };
   
-// Funcion para ordenar asc y desc junto con los filtros de genero y paises
+// Funcion para ordenar asc y desc junto con los filtros de género y países
 const valorOrdenar = (item, sortBy) => {
   switch (sortBy) {
   case "mainField":
@@ -77,3 +78,4 @@ const computeGenreStats = (data) => {
     return accumulator;
   }, {});
 };
+
