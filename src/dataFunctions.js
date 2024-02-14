@@ -9,8 +9,8 @@ export const filterData = (data, filterBy, value) => {
     }
     return false;
   });
-  
 };
+
 // Funcion para ordenar ASC y DESC
 export const sortData = (data, sortConfig) => {
   const { sortBy, sortOrder } = sortConfig;

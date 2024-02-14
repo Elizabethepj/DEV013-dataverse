@@ -18,7 +18,7 @@ let sortName;// Declaracion de sortName
 // Agrega EventListener para los select
 filterSelectors.forEach(({ selector }) => {
   const selectElement = document.querySelector(selector);
-  selectElement.addEventListener("change", applyFilters);
+  selectElement.addEventListener("change",() => applyFilters);
 });
 
 // EventListener para el botón de limpiar
@@ -61,7 +61,6 @@ function applyFilters() {
 
   // Renderiza los datos filtrados
   dataList.appendChild(renderItems(filteredData));
-
 
   // Realiza el ordenamiento de datos
   sortName = document.querySelector('[data-testid="select-sort"]');
