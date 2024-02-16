@@ -2,7 +2,7 @@ import { filterData, sortData, computeStats } from '../src/dataFunctions.js';
 import { data as fakeData } from './data.js';
 
 describe('filterData', () => {
-  it('Filtrado de datos por género', () => {
+  it('Filtrado de datos por genero', () => {
     const result = filterData(fakeData, 'mainField', 'Literatura');
     expect(result).toHaveLength(4);
     result.forEach((writer) => {

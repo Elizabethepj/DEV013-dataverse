@@ -420,6 +420,6 @@ const data = [
     "extraInfo": {
       "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
-  }
+  }, 
 ];
 export default data;

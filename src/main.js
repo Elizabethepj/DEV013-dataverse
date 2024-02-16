@@ -115,7 +115,7 @@ function renderStats(stats) {
 // Función para renderizar las estadísticas como elementos HTML
 function renderStatsElement(stats) {
   const statsElement = document.createElement('div');
-  statsElement.textContent = 'ESTADÍSTICAS';
+  statsElement.innerHTML = '<b>ESTADÍSTICAS</b>';
   // Agregar estadísticas de países
   statsElement.appendChild(renderStatsCategory('📶 Cantidad de escritoras por nacionalidad', stats.countries));
   // Agregar estadísticas de géneros
@@ -126,7 +126,7 @@ function renderStatsElement(stats) {
 // Función para renderizar estadísticas de una categoría específica
 function renderStatsCategory(categoryName, categoryStats) {
   const categoryElement = document.createElement('div');
-  categoryElement.textContent = `${categoryName}:`;
+  categoryElement.innerHTML = `<b>${categoryName}:</b>`;
 
   // Iterar sobre las estadísticas y agregarlas al elemento
   for (const item in categoryStats) {
@@ -152,6 +152,13 @@ buttonFacts.addEventListener('click', () => {
 });
 
 // Cierra el modal
+
+const closeButton = document.getElementById('button-close');
+
+closeButton.addEventListener('click', () => {
+  closeStatsDialog();
+});
+
 statsDialog.addEventListener('click', (event) => {
   if (event.target === statsDialog) {
     closeStatsDialog();
@@ -162,10 +169,3 @@ statsDialog.addEventListener('click', (event) => {
 function closeStatsDialog() {
   statsDialog.close();
 }
-
-
-
-
-
-
-

@@ -5,10 +5,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escritoras</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-  </head>
+  <link rel="stylesheet" href="style.css" />
+   </head>
 
 <body>
   <header>
@@ -53,6 +52,8 @@
       <div class="modal-content" id="stats-content">
         <span class="close-btn" onclick="closeStatsDialog()"></span>
         <div id="stats-container"></div>
+        <button data-testid="button-close" id="button-close">CERRAR</button>
+
         </div>
     </dialog>
        
@@ -63,16 +64,15 @@
     <ul id="cardList"></ul>
   </div>
 
-
-  <script src="view.js" type="module"></script>
-  <script src="main.js" type="module"></script>
-  <script src="dataFunctions.js" type="module"></script>
-
   <footer>
     El mundo a través de grandes escritoras<br>
     Desarrolladoras: Raiza Gatica/Elizabeth Patiño J.<br>
     Laboratoria<br>
   </footer>
+  
+  <script src="view.js" type="module"></script>
+  <script src="main.js" type="module"></script>
+  <script src="dataFunctions.js" type="module"></script>
 </body>
 
 </html>
