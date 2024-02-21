@@ -48,18 +48,12 @@ h1 {
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   margin-top:-3%;
-}
-
-label {
-  margin-bottom: 2%;
-  font-weight: bold;
-  display: flex;
-  margin-left: 3%;
-  margin-top: 2%;
+  align-items: center;
+  justify-content: center;
 }
 
 select {
-  width: 13%;
+  width: 16%;
   height: 0.5%;
   padding: 1%;
   margin-bottom: 2%;
@@ -67,15 +61,14 @@ select {
   border: 1% #ccc;
   border-radius: 10%;
   font-family: 'Marcellus', serif;
-  display: flex
+  display: flex;
+  margin-left:4%;
 }
 
 #button-clear,
-#button-facts, #button-close
+#button-facts
 {
   font-family: 'Marcellus', serif;
-  margin-left: 1.5%;
-  margin-right: 1.5%;
   font-weight: bold;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
   background-color: #332D40;
@@ -83,11 +76,28 @@ select {
   display: flex;
   text-align: center;
   width: auto;
-  margin: auto;
+  margin-left: 4%;
   cursor:pointer;
+  border-radius: 20%;  
+  }
+
+ #button-close{
+  font-family: 'Marcellus', serif;
+  font-weight: bold;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+  background-color: #332D40;
+  color: #f8edda;
+  display: flex;
+  text-align: center;
+  width: auto;
+  cursor:pointer;
+  border-radius: 20%;  
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.card img {
+ .card img {
   width: 70%;
   height: auto;
   border-radius: 10px 10px 10px 10px;

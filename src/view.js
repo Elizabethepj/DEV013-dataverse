@@ -21,7 +21,7 @@ export const renderItems = (data) => {
     list.setAttribute("itemtype", "https://schema.org/Person");
 
     itemList.appendChild(itemContainer);
-    list.appendChild(itemList)
+    list.appendChild(itemList);
 
   });
 

@@ -152,9 +152,7 @@ buttonFacts.addEventListener('click', () => {
 });
 
 // Cierra el modal
-
 const closeButton = document.getElementById('button-close');
-
 closeButton.addEventListener('click', () => {
   closeStatsDialog();
 });

@@ -16,17 +16,15 @@
   </header>
 
     <div class="form-container">
-    <label for="type-select">Género literario: </label>
-    <select name="type" id="type-select" data-testid="filter-type">
-      <option value="">Elegir una opción</option>
+      <select name="type" id="type-select" data-testid="filter-type">
+      <option value="">Elegir por género literario</option>
       <option value="Literatura">Literatura</option>
       <option value="Poesía">Poesía</option>
       <option value="Poesía, Novela">Poesía, Novela</option>
     </select>
 
-    <label for="country-select">Nacionalidad: </label>
-    <select name="country" id="country-select" data-testid="filter-data">
-      <option value="">Elige una opción</option>
+      <select name="country" id="country-select" data-testid="filter-data">
+      <option value="">Eligir por nacionalidad</option>
       <option value="Reino Unido">Reino Unido</option>
       <option value="Chile">Chile</option>
       <option value="Nicaragua">Nicaragua</option>
@@ -39,9 +37,9 @@
       <option value="EE. UU.">EE. UU.</option>
     </select>
 
-    <label for="sort-select">Ordenar por: </label>
+   
     <select name="ordenar" id="sort-select" data-testid="select-sort">
-      <option value="none">Elige una opción</option>
+      <option value="none">Ordenar por</option>
       <option value="asc">A-Z</option>
       <option value="desc">Z-A</option>
     </select> <br>
@@ -51,9 +49,8 @@
     <dialog id="statsDialog">
       <div class="modal-content" id="stats-content">
         <span class="close-btn" onclick="closeStatsDialog()"></span>
-        <div id="stats-container"></div>
+        <div id="stats-container"></div> <br>
         <button data-testid="button-close" id="button-close">CERRAR</button>
-
         </div>
     </dialog>
        
